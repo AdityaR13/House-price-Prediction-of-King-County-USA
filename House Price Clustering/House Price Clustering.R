@@ -1,6 +1,6 @@
 #### Alternatively Clustering can be done according geo-mapping ( Only Visualization for now )
 # Clustering
-# Visualizing zipcode and lat and long
+# Visualizing zipcode and lat and long                                                     # these plots are available in plots house prediction
 ggplot(data = hprice, mapping = aes(x = zipcode, y = price)) + geom_boxplot()
 
 ggplot(hprice, mapping = aes(x=lat, y=long)) + geom_point(colour= "green") + geom_smooth(method = 'lm')
