@@ -6,7 +6,7 @@ ggplot(data = hprice, mapping = aes(x = zipcode, y = price)) + geom_boxplot()
 ggplot(hprice, mapping = aes(x=lat, y=long)) + geom_point(colour= "green") + geom_smooth(method = 'lm')
 
 
-hcluster <- kmeans(scale(hprice[,c(18,19,24)]),25,100)  #( creating 25 clusters,100 random start)
+hcluster <- kmeans(scale(hprice[,c(18,19,24)]),25,100)  #( creating 25 clusters,100 random start)   # lat long and price 
 
 # factoring clusters
 hprice$cluster<-factor(hcluster$cluster)
